@@ -51,7 +51,7 @@ section{
     background-position:center ;
     position: relative;
     z-index: 1;
-    height: 675px;    
+    height: 720px;    
 }
 #hero::after {
 	content: '';
@@ -62,7 +62,7 @@ section{
     background: rgba(0,0,0,.4);
     background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
 	z-index: -1;
-    height: 669px;
+    height:714px;
 }
 
 
