@@ -161,6 +161,60 @@ ul.email_form_field li{
     min-width: 500px;
     padding: 10px 10px 0;
 }
+.placement input:focus{
+    border-color: #0071eb;
+    outline: none;
+}
+.placement input:valid{
+    box-shadow: none;
+    border: 0;
+}
+.top_placeholder{
+    display: none;
+}
+.placement label input[type="email"]:focus:not(:placeholder-shown) ~ .top_placeholder{
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    top: 70%;
+    transform: translateY(0);
+    left: 105px;
+    position: absolute;
+    transition: font .1s ease,top .1s ease,transform .1s ease;
+    z-index: 20;
+}
+.placement label input[type="email"]:not(:placeholder-shown)  ~ .top_placeholder{
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    top: 68%;
+    transform: translateY(0);
+    left: 105px;
+    position: absolute;
+    transition: font .1s ease,top .1s ease,transform .1s ease;
+    z-index: 20;
+}
+.placement label input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
+    border: 0;
+    border-bottom: 2px solid #ffa00a;
+}
+.input_responsive>.placement>label>input[type="email"]:invalid:not(:focus):not(:placeholder-shown)~ .error{
+    color: #ffa00a;
+    font-weight: 400;
+    max-height: 20px;
+    display: block;
+}
+
+
+.error{
+    display: none;
+    color: #ffa00a;
+    font-size: 15px;
+    margin-bottom: -6px;
+    padding: 6px 3px;
+    text-align: left;
+    margin-left: 92px;
+}
 
 .form_btn{
     display: inline-block;
@@ -174,12 +228,13 @@ ul.email_form_field li{
     padding: 0 1em;
     text-align: center;
     font-size: 1.875rem;
-    min-height: 70px;
+    min-height: 71px;
     align-items: center;
     display: inline-flex;
     flex-direction: row;
     line-height: normal;
     width: auto;
+    border: none;
     border-bottom-left-radius: 0;
     border-left: 1px solid #333;
     border-top-left-radius: 0;
@@ -192,10 +247,18 @@ ul.email_form_field li{
     box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
     color: #fff;
 }
+button.big_btn.btn_red:focus:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.085em #85050b;
+}
+button.big_btn.btn_red:active {
+    background: #bb0a12;
+}
 .btn_red.hover, .btn_red:focus, .btn_red:hover {
     background: #f40612;
     box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
 }
+
 #btn_text{
     flex: 1 1 auto;
     padding: 0.5rem 0;
@@ -264,6 +327,60 @@ ul.email_form_field li{
     overflow: hidden;
     position: relative;
 }
+.story_card_animation{
+    align-items: center;
+    background: #000;
+    border: 2px solid hsla(0,0%,100%,.25);
+    border-radius: 0.75em;
+    bottom: 8%;
+    box-shadow: 0 0 2em 0 #000;
+    display: flex;
+    left: 50%;
+    margin: 0 auto;
+    min-width: 15em;
+    padding: 0.25em 0.65em;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 10;
+}
+.story_card_animation_image{
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 1em 0 0;
+}
+.story_card_animation_image img{
+    height: 5em;
+}
+.story_card_animation_text{
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0.3em 0
+}
+.text-0{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+.text-1{
+    color: #0071eb;
+    font-size: .9em;
+    font-weight: 400;
+}
+.story_card_animation_custom{
+    background: url(./assets/download-icon.gif) 50% no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 3em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    width: 3em;
+}
+
+
 .story_card_img{
     position: relative;
     z-index: 2;
@@ -273,16 +390,7 @@ img.story_card_img{
     height: auto;
     max-width: 100%;
 }
-.story_card_animation{
-    height: 100%;
-    left: 50%;
-    max-height: 54%;
-    max-width: 73%;
-    position: absolute;
-    top: 46%;
-    transform: translate(-50%,-50%);
-    width: 100%;
-}
+
 /*html details element*/
 .story_card#faq>.story_container>.card_text{
     width: 100%;
