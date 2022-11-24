@@ -436,6 +436,25 @@ details[open].faq_list_item> summary.faq_question{
     display: inline-block;
     padding: 1.2em;
 }
+#faq_cta .error{
+    margin-left: 174px;
+}
+#faq_cta .top_placeholder{
+    top: 84%;
+    left: 420px;
+    color: #737373;
+}
+#faq_cta .placement label input[type="email"]:focus:not(:placeholder-shown) ~ .top_placeholder{
+    top: 84%;
+    left: 420px;
+    color: #737373;
+}
+#faq_cta .placement label input[type="email"]:not(:placeholder-shown)  ~ .top_placeholder{
+    top: 83%;
+    left: 420px;
+    color: #737373;
+
+}
 
 /*Footer*/
 .footer_card{
