@@ -327,7 +327,17 @@ button.big_btn.btn_red:active {
     overflow: hidden;
     position: relative;
 }
-.story_card_animation{
+#story_card_1 .story_card_animation{
+    height: 100%;
+    left: 50%;
+    max-height: 54%;
+    max-width: 73%;
+    position: absolute;
+    top: 46%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+#story_card_2 .story_card_animation{
     align-items: center;
     background: #000;
     border: 2px solid hsla(0,0%,100%,.25);
@@ -344,12 +354,12 @@ button.big_btn.btn_red:active {
     width: 60%;
     z-index: 10;
 }
-.story_card_animation_image{
+#story_card_2 .story_card_animation_image{
     flex-grow: 0;
     flex-shrink: 0;
     margin: 0 1em 0 0;
 }
-.story_card_animation_image img{
+#story_card_2 .story_card_animation_image img{
     height: 5em;
 }
 .story_card_animation_text{
@@ -367,7 +377,7 @@ button.big_btn.btn_red:active {
     font-size: .9em;
     font-weight: 400;
 }
-.story_card_animation_custom{
+#story_card_2 .story_card_animation_custom{
     background: url(./assets/download-icon.gif) 50% no-repeat;
     background-size: 100%;
     content: "";
