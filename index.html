@@ -103,16 +103,7 @@
                 <div class="card_img">
                     <div class="story_card_animation_container">
                         <!-- <img alt="" class="story_card_img" src="./assets/mobile.jpg" > -->
-                        <div class="story_card_animation">
-                            <div class="story_card_animation_image">
-                                <!-- <img alt="" src="./assets/boxshot.png"> -->
-                            </div>
-                            <div class="story_card_animation_text">
-                                <div id="" class="text-0" >Stranger Things</div>
-                                <div id="" class="text-1" >Downloading...</div>
-                            </div>
-                            <div class="story_card_animation_custom" aria-hidden="true"></div>
-                        </div>
+
                     </div>
                     
                 </div>
@@ -128,16 +119,7 @@
                 <div class="card_img">
                     <div class="story_card_animation_container">
                         <img alt="" class="story_card_img" src="./assets/kids.png" >
-                        <div class="story_card_animation">
-                            <div class="story_card_animation_image">
-                                <!-- <img alt="" src="./assets/boxshot.png"> -->
-                            </div>
-                            <div class="story_card_animation_text">
-                                <div id="" class="text-0" >Stranger Things</div>
-                                <div id="" class="text-1" >Downloading...</div>
-                            </div>
-                            <div class="story_card_animation_custom" aria-hidden="true"></div>
-                        </div>
+
                     </div>
                     
                 </div>
@@ -153,16 +135,7 @@
                 <div class="card_img">
                     <div class="story_card_animation_container">
                         <img alt="" class="story_card_img" src="./assets/android.jpg" >
-                        <div class="story_card_animation">
-                            <div class="story_card_animation_image">
-                                <img alt="" src="./assets/boxshot.png">
-                            </div>
-                            <div class="story_card_animation_text">
-                                <div id="" class="text-0" >Stranger Things</div>
-                                <div id="" class="text-1" >Downloading...</div>
-                            </div>
-                            <div class="story_card_animation_custom" aria-hidden="true"></div>
-                        </div>
+
                     </div>
                     
                 </div>
@@ -238,23 +211,24 @@
                     </div>
                     <div class="cta_form">
                         <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-                        <form class="email_form">
+                        <form class="email_form" id="cta" >
                             <ul class="email_form_field">
                                 <li class="form_space">
                                     <div class="input_responsive">
                                         <div class="placement">
                                             <label placeholder="email">
-                                                <input type="email" class="place_label" placeholder="Email Address">
-                                                <label>Email Address</label>
+                                                <input type="email" placeholder="Email Address" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid email" required>
+                                                <label class="top_placeholder">Email Address</label>
+                                                <div class="error">Email is required!</div>
                                             </label>
                                         </div>
-                                        <div class="error">Email is required!</div>
+                                        
                                     </div>
                                 </li>
 
                             </ul>
                             <div class="form_btn">
-                                <button class="big_btn btn_red" type="submit"><span id="btn_text">Get Started</span><span id="btn_arrow"><img id="arrow" src="./assets/round-greater-than.svg"></span></button>
+                                <button form="cta" class="big_btn btn_red" type="submit" value="Submit"><span id="btn_text">Get Started</span><span id="btn_arrow"><img id="arrow" src="./assets/round-greater-than.svg"></span></button>
                             </div>
                         </form>
                     </div>
